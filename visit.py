@@ -33,7 +33,7 @@ ip = raw_input("[{}+{}] Website Name : ".format(m,p))
 if "http" not in ip:
    ip = "https://{}".format(ip)
 try:
-   requests.get(ip)
+   requests.get(ip) 
 except:
    os.system("clear")
 
