@@ -7,6 +7,23 @@ h = '\033[92m'
 p = '\033[97m'
 m = '\033[91m'
 br = '\033[94m'
+print("tunggu sebentar")
+time.sleep(1)
+os.system("clear")
+print("loading.")
+time.sleep(1)
+os.system("clear")
+print("loading..")
+time.sleep(1)
+os.system("clear")
+print("loading...")
+time.sleep(1)
+os.system("clear")
+print("Subscribe channel Tampansky ID".format())
+time.sleep(5)
+os.system("xdg-open https://www.youtube.com/c/TampanskyID")
+os.system("clear")
+time.sleep(4)
 def mengetik(s):
     for c in s + '':
         sys.stdout.write(c)
